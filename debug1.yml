@@ -1,5 +1,5 @@
 ---
-- name: Demo
+- name: DemoAlpha
   hosts: all
   gather_facts: False
   become: False
