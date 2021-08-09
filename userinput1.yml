@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+
+  tasks:
+
+    - name: Print a message
+      ansible.builtin.debug:
+        msg: 'Logging in as {{ username }}'
