@@ -1,0 +1,6 @@
+- name: Ansible Find Example
+  hosts: localhost
+  tasks:
+    - include: tasks/ls1.yaml
+    - include: tasks/cm.yaml
+    #- include: tasks/gm.yaml

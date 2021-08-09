@@ -1,0 +1,3 @@
+- name: check line by line
+  command: "mkdir {{ dname }}"
+

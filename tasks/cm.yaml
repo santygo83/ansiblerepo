@@ -1,0 +1,7 @@
+   - command: "cat {{ item }}"
+     when: item=="abc.txt"
+     loop: "{{ output1.stdout_lines }}"
+     register: output2
+   - debug:
+       msg: "{{ output2 }}"
+
