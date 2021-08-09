@@ -1,0 +1,20 @@
+- name: Ansible Find Example
+  hosts: localhost
+  tasks:
+   - name : Find files older than 30 days
+     find:
+       paths: /etc/ansible/
+       patterns: "^.*?\\.(?:txt|log\\.gz)$"
+       use_regex: yes
+     register: output
+
+   - name: check line by line
+     command: "cat {{ item.path }}"
+     with_items: "{{ output.files }}"
+     register: output1
+
+
+
+   - name: check line by line
+     debug:
+       msg: "{{ output1 }}"
